@@ -22,7 +22,7 @@ This example provides a "getting started" guide, which shows how to use the "Eth
 This document describes how to get the data from a Rockwell PLC using the Ethernet IP Connector App (with its respective Configurator). The data flow goes through different applications, starting with the data acquisition
 using the Ethernet IP Connector which writes all topics to the IE Databus. The Data Service subscribes to all those topics and storage the values in the database. Finally the values are visualized using Performance Insight.
 
-<p align="center"><kbd><img src="docs/graphics/Overview.PNG" /></kbd></p>
+<p align="center"><kbd><img src="docs/graphics/overview-eip.png" /></kbd></p>
 
 ### General task
 
