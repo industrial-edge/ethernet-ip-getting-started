@@ -1,19 +1,15 @@
-# Add a one sentence description of the how to
+# Ethernet IP application example
 
-Connecting an USB based QR Code Scanner to an Industrial Edge Device
-
-Use [markdownlint tool](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) when writing documentation and follow it. **No warnings allowed**
-
-Use [cSpell](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) for avoiding typos and grammar error. Very handy tool when writing doc in VS Code.
-
-- [Add a one sentence description of the how to](#add-a-one-sentence-description-of-the-how-to)
+This example provides a "getting started" guide, which shows how to use the "Ethernet IP" connector app
+- [Ethernet IP](#ethernet-ip)
   - [Description](#description)
     - [Overview](#overview)
     - [General task](#general-task)
   - [Requirements](#requirements)
+    - [Prerequisities](#prerequisities)
     - [Used components](#used-components)
-    - [Further requirements](#further-requirements)
-  - [Installation](#installation)
+    - [Studio 5000 Logix Designer Project](#studio-5000-logix-designer-project)
+  - [Configuration steps](#configuration-steps)
   - [Usage](#usage)
   - [Documentation](#documentation)
   - [Contribution](#contribution)
@@ -23,35 +19,59 @@ Use [cSpell](https://marketplace.visualstudio.com/items?itemName=streetsidesoftw
 
 ### Overview
 
-Add a short overview of the How To
+This document describes how to get the data from a Rockwell PLC using the Ethernet IP Connector App (with its respective Configurator). The data flow goes through different applications, starting with the data acquisition
+using the Ethernet IP Connector which writes all topics to the IE Databus. The Data Service subscribes to all those topics and storage the values in the database. Finally the values are visualized using Performance Insight.
+
+<p align="center"><kbd><img src="docs/graphics/Overview.PNG" /></kbd></p>
 
 ### General task
 
-Add the goal/ task of this How To.
-
-You can also add graphics from the docs/graphics folder.
-
-![deploy VFC](docs/graphics/example_graphic.png)
+The example reads and writes data from a CompactLogix Rockwell PLC using the Ethernet IP Connector.
+The data is published on the IE Databus. The Data Service monitors the bus and collect the shopfloor data.
+First an adapter, providing datapoints must be assigned and configured.
+Afterwards the data structure can be modeled using assets and aspects. See [data-service-how-to](https://github.com/industrial-edge/data-service-configure-s7-adapter-to-collect-data) for further explanation.
+This data is collected, saved for individual time periods and transfered for further processing (using Performance Insight).
 
 ## Requirements
 
-### Prerequisites
+###  Prerequisities
 
-Add information what are the prerequisites for this app to work
+- Access to an Industrial Edge Management System (IEM)
+- Onboarded Industial Edge Device on IEM
+- Installed System Configurators for Databus and Ethernet IP (runs locally on Edge Device)
+- Installed System Apps Databus on Edge Device
+- Installed Ethernet IP on Edge Device
+- Installed Data Service on Edge Device
+- Installed Performance Insight on Edge Device
+- Edge device is connected to Rockwell PLC CompactLogix5370
+- Studio 5000 project loaded on PLC (e.g. for counting application)
+- HTML5-capable Internet browser
 
 ### Used components
 
-Add the used components here (e.g.)
+- Industrial Edge Management (IEM) V 1.2.14 (OS) V 1.2.0-36
+  - IE Databus V 1.2.16
+  - IE Databus Configurator V 1.2.23
+  - Ethernet IP Connector V 1.1.0
+  - Ethernet IP Configurator V 1.1.0
+  - Data Service V 1.1.1
+  - Performance Insight V 1.2.1
+- Industrial Edge Device (OS) V 1.2.0-56
+- Studio 5000 Logix Designer V 32.00
+- CompactLogix 5370 Rev. 32.011
 
-- Industrial Edge App Publisher V1.0.8
-- Docker Engine 18.09.6
-- Docker Compose V2.4
-- S7 Connector V 1.0.22
-- S7 Connector Configurator V 1.0.9
-- Industrial Edge Device V 1.0.0-34
-- TIA Portal V16
-- PLC: CPU 1511 FW 2.8.3
+### Studio 5000 Logix Designer Project
 
+The used TIA Portal project can be found in the [sources folder](./src) under the following name:
+
+- [compactlogix-demo-29042021.7z](src/compactlogix-demo-29042021.7z)
+
+## Configuration steps
+
+You can find the further information about the following steps in the [docs](docs/Installation.md)
+- Configure PLC Connection (Databus, EthernetIP Connector)
+- Configure Configure Data Service
+- Configure Performance Insight
 
 ## Installation
 
@@ -62,22 +82,19 @@ To keep the readme.md file as short as possible please add more detailed informa
 
 ## Usage
 
-Add a description how to use your application.
+Once the Data Service app is configured and data is availalbe from a running Rockwell PLC, process data can be collected.
+Performance Insight visualizes this data and gives Iata insights (KPIs, metrics, etc.) 
 
 ## Documentation
 
-- Add links to additional documentation here
-  
-- Here is a link to the [docs](docs/) of this application example.
-- You can find further documentation and help in the following links
+You can find further documentation and help in the following links
   - [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
   - [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
   - [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
-  - [Industrial Edge GitHub page](https://github.com/industrial-edge)
   
 ## Contribution
 
-Thanks for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section or, even better, is free to propose any changes to this repository using Merge Requests.
+Thanks for your interest in contributing. Anybody is free to report bugs, unclear documenation, and other problems regarding this repository in the Issues section or, even better, is free to propose any changes to this repository using Merge Requests.
 
 ## Licence and Legal Information
 
