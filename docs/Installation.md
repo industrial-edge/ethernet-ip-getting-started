@@ -1,71 +1,47 @@
-# Installation
+# Configuration
 
-- [Installation](#installation)
-  - [Build application](#build-application)
-    - [Cloning image](#cloning-image)
-    - [Build docker image](#build-docker-image)
-  - [Upload  App to the Industrial Edge Managment](#upload-app-to-the-industrial-edge-managment)
-    - [Connect your Industrial Edge App Publisher](#connect-your-industrial-edge-app-publisher)
-    - [Upload  App using the Industrial Edge App Publisher](#upload-app-using-the-industrial-edge-app-publisher)
-  - [Deploying of App](#deploying-of-app)
-    - [Configuring application](#configuring-application)
-    - [Add additional installation steps here, if required](#add-additional-installation-steps-here-if-required)
-      - [Additional steps](#additional-steps)
-  
-## Build application
+- [Configuration](#configuration)
+  - [Configure PLC Connection](#configure-plc-connection)
+    - [Configure Databus](#configure-databus)
+    - [Configure Ethernet IP Connector](#configure-ethernet-ip-connector)
+  - [Configure Data Service](#configure-data-service)
+  - [Configure Performance Insight](#configure-performance-insight)
 
-### Cloning image
+## Configure PLC Connection
 
-- Clone or Download the source code to your engineering VM
+To read data from a Rockwell PLC and provide the data, we will use the Ethernet IP Connector to establish a connection with the PLC.
+The Ethernet IP Connector sends data to the Databus from where the Data Service can collect and save the needed values.
+In order to build this infrastructure, these apps must be configured properly:
 
-### Build docker image
+- Databus
+- Ethernet IP Connector
 
-Add instruction how to build your application, e.g.:
+### Configure Databus
 
-- Open console in the source code folder
-- Use command `docker-compose build` to create the docker image.
-- This docker image can now be used to build you app with the Industrial Edge App Publisher
-- *docker images | grep scannerapp* can be used to check for the images
-- You should get a result similiar to this:
+- Open the Industrial Edge Management web interface
+- Go to "Data Connections" > IE Databus
+- Select the corresponding Industrial Edge Device
+- Create a new user with username and password and give the user publish and subscribe permission
+- Create this topic `"ie/#"`
+- Deploy the databus configuration and wait for the job to be finished successfully
 
-## Upload  App to the Industrial Edge Managment
+![Databus](docs/graphics/Databus.png)
 
-Please find below a short description how to publish your application in your IEM.
+### Configure Ethernet IP Connector
 
-For more detailed information please see the section for [uploading apps to the IEM](https://github.com/industrial-edge/upload-app-to-iem).
+- Open the Industrial Edge Device web interface
+- Open the Ethernet IP Configurator
+- xxx
+- Open the Ethernet IP Connector
+- xxx
 
-### Connect your Industrial Edge App Publisher
+## Configure Data Service
 
-- Connect your Industrial Edge App Publisher to your docker engine
-- Connect your Industrial Edge App Publisher to your Industrial Edge Managment System
+- Open the Industrial Edge Device web interface
+- Open the Data Service
+- Go to the adapter settings and select "Ethernet IP Connector"
+- xxx
 
-### Upload  App using the Industrial Edge App Publisher
+## Configure Performance Insight
 
-- Create a new application using the Industrial Publisher
-- Add a app new version
-- Import the [docker-compose](../docker-compose.yml) file using the **Import YAML** button
-- The warning `Build (sevices >> scanner-service) is not supported` can be ignored
-- **Start Upload** to transfer the app to Industrial Edge Managment
-- Further information about using the Industrial Edge App Publisher can be found in the [IE Hub](https://iehub.eu1.edge.siemens.cloud/documents/appPublisher/en/start.html)
-
-## Deploying of App
-
-### Configuring application
-
-If your app needs additional configuration you can add further description here, e.g.
-
->**param.json**
->
->     {
->        "Parameter1": "Siemens AG",
->        "Parameter2": "edge",
->        "Parameter3": "edge",
->     }
-
-Add description of the configuration here:
-
-### Add additional installation steps here, if required
-
-#### Additional steps
-
-Add description here
+xxx
