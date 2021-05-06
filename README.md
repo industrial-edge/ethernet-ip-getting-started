@@ -65,7 +65,7 @@ The used TIA Portal project can be found in the [sources folder](./src) under th
 
 ## Configuration steps
 
-You can find further information about the following steps in the [Installation](docs/Installation.md) documentation.
+You can find further information about the following steps in the [Configuration](docs/Installation.md) documentation.
 
 - Configure PLC Connection (Databus, EthernetIP Connector)
 - Configure Configure Data Service
