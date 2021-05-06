@@ -77,7 +77,7 @@ The app Performance Insight is used to visualize the data comming from the Rockw
 
 - Open the app Performance Insight
 - In the view "My Plant", create a new dashboard
-- Add a new widget "Value" for the parameter `"floaty"`
-- Add a new widget "Diagram" for the parameter `"counter"`
+- Add a new widget "Value" for the parameter `floaty`
+- Add a new widget "Diagram" for the parameter `counter`
 
 ![PerformanceInsight](graphics/PerformanceInsight.png)
