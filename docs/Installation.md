@@ -27,7 +27,7 @@ The system app Databus is essential to exchange data between a PLC and the Indus
 - Create this topic `"ie/#"`
 - Deploy the databus configuration and wait for the job to be finished successfully
 
-![Databus](docs/graphics/Databus.png)
+![Databus](graphics/Databus.png)
 
 ### Configure Ethernet IP Connector
 
@@ -39,15 +39,15 @@ Here the connection to the Rockwell PLC can be configured.
 - Open the app Ethernet IP Configurator
 - Add the Rockwell PLC as data source
 
-![Source](docs/graphics/ethernet_ip_source.png)
+![Source](graphics/ethernet_ip_source.png)
 
 - Configure the user settings
   
-![Settings](docs/graphics/ethernet_ip_settings.png)
+![Settings](graphics/ethernet_ip_settings.png)
 
 - Add all needed tags
 
-![Tags](docs/graphics/ethernet_ip_tags.png)
+![Tags](graphics/ethernet_ip_tags.png)
 
 - Deploy the configuration
 - Start the project
@@ -63,13 +63,13 @@ This is a prerequisite for other apps like Performance Insight.
 - Enter the username and password for the databus user
 - Activate the adapter
 
-![DataServiceAdapter](docs/graphics/DataService_Adapter.png)
+![DataServiceAdapter](graphics/DataService_Adapter.png)
 
 - Go to the assets view and add new variables for data, comming from the Ethernet IP Connector
 
-![DataServiceAdapter](docs/graphics/DataService_Add.png)
+![DataServiceAdapter](graphics/DataService_Add.png)
 
-![DataServiceAdapter](docs/graphics/DataService_Variables.png)
+![DataServiceAdapter](graphics/DataService_Variables.png)
 
 ## Configure Performance Insight
 
@@ -80,4 +80,4 @@ The app Performance Insight is used to visualize the data comming from the Rockw
 - Add a new widget "Value" for the parameter `"floaty"`
 - Add a new widget "Diagram" for the parameter `"counter"`
 
-![PerformanceInsight](docs/graphics/PerformanceInsight.png)
+![PerformanceInsight](graphics/PerformanceInsight.png)
