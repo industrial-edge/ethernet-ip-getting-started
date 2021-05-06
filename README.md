@@ -1,12 +1,13 @@
 # Ethernet IP application example
 
-This example provides a "getting started" guide, which shows how to use the "Ethernet IP" connector app
-- [Ethernet IP](#ethernet-ip)
+This example provides a getting started guide, which shows how to use the Industrial Edge app "Ethernet IP Connector".
+
+- [Ethernet IP application example](#ethernet-ip-application-example)
   - [Description](#description)
     - [Overview](#overview)
     - [General task](#general-task)
   - [Requirements](#requirements)
-    - [Prerequisities](#prerequisities)
+    - [Prerequisites](#prerequisites)
     - [Used components](#used-components)
     - [Studio 5000 Logix Designer Project](#studio-5000-logix-designer-project)
   - [Configuration steps](#configuration-steps)
@@ -19,28 +20,24 @@ This example provides a "getting started" guide, which shows how to use the "Eth
 
 ### Overview
 
-This document describes how to get the data from a Rockwell PLC using the Ethernet IP Connector App (with its respective Configurator). The data flow goes through different applications, starting with the data acquisition
-using the Ethernet IP Connector which writes all topics to the IE Databus. The Data Service subscribes to all those topics and storage the values in the database. Finally the values are visualized using Performance Insight.
+This application example describes how to get the data from a Rockwell PLC using the app Ethernet IP Connector (with its respective configurator). The data flow goes through different applications, starting with the data acquisition. Therefore the Ethernet IP Connector is used which writes all topics to the IE Databus. The Data Service subscribes to all those topics and stores the values in the database. Finally the values are visualized using Performance Insight.
 
-<p align="center"><kbd><img src="docs/graphics/overview-eip.png" /></kbd></p>
+![Overview](docs/graphics/overview-eip.png)
 
 ### General task
 
-The example reads and writes data from a CompactLogix Rockwell PLC using the Ethernet IP Connector.
-The data is published on the IE Databus. The Data Service monitors the bus and collect the shopfloor data.
-First an adapter, providing datapoints must be assigned and configured.
-Afterwards the data structure can be modeled using assets and aspects. See [data-service-how-to](https://github.com/industrial-edge/data-service-configure-s7-adapter-to-collect-data) for further explanation.
-This data is collected, saved for individual time periods and transfered for further processing (using Performance Insight).
+The example reads and writes data from a CompactLogix Rockwell PLC using the Ethernet IP Connector. The data is published on the IE Databus. The Data Service monitors the bus and collect the shopfloor data. First an adapter, providing datapoints must be assigned and configured. Afterwards the data structure can be modeled using assets and aspects. See [data-service-how-to](https://github.com/industrial-edge/data-service-configure-s7-adapter-to-collect-data) for further explanation. This data is collected, saved for individual time periods and transfered for further processing (using Performance Insight).
 
 ## Requirements
 
-###  Prerequisities
+### Prerequisites
 
 - Access to an Industrial Edge Management System (IEM)
 - Onboarded Industial Edge Device on IEM
-- Installed System Configurators for Databus and Ethernet IP (runs locally on Edge Device)
-- Installed System Apps Databus on Edge Device
-- Installed Ethernet IP on Edge Device
+- Installed System Configurator for Databus on IEM
+- Installed System App Databus on Edge Device
+- Installed Ethernet IP Configurator on Edge Device
+- Installed Ethernet IP Connector on Edge Device
 - Installed Data Service on Edge Device
 - Installed Performance Insight on Edge Device
 - Edge device is connected to Rockwell PLC CompactLogix5370
@@ -64,33 +61,28 @@ This data is collected, saved for individual time periods and transfered for fur
 
 The used TIA Portal project can be found in the [sources folder](./src) under the following name:
 
-- [compactlogix-demo-29042021.7z](src/compactlogix-demo-29042021.7z)
+[compactlogix-demo-29042021.7z](src/compactlogix-demo-29042021.7z)
 
 ## Configuration steps
 
-You can find the further information about the following steps in the [docs](docs/Installation.md)
+You can find further information about the following steps in the [Installation](docs/Installation.md) documentation.
+
 - Configure PLC Connection (Databus, EthernetIP Connector)
 - Configure Configure Data Service
 - Configure Performance Insight
 
-## Installation
-
-You can find the further information about the following steps in the [docs](./docs)
-To keep the readme.md file as short as possible please add more detailed information in the docs folder.
-
-- [Build application](docs/Installation.md#build-application)
-
 ## Usage
 
-Once the Data Service app is configured and data is availalbe from a running Rockwell PLC, process data can be collected.
-Performance Insight visualizes this data and gives Iata insights (KPIs, metrics, etc.) 
+Once the Data Service app is configured and data is availalbe from a running Rockwell PLC, process data can be collected. Performance Insight visualizes this data and gives data insights (KPIs, metrics, etc.).
 
 ## Documentation
 
 You can find further documentation and help in the following links
-  - [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
-  - [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
-  - [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
+
+- [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
+- [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
+- [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
+- [Industrial Edge GitHub page](https://github.com/industrial-edge)
   
 ## Contribution
 
