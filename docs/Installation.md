@@ -1,71 +1,83 @@
-# Installation
+# Configuration
 
-- [Installation](#installation)
-  - [Build application](#build-application)
-    - [Cloning image](#cloning-image)
-    - [Build docker image](#build-docker-image)
-  - [Upload  App to the Industrial Edge Managment](#upload-app-to-the-industrial-edge-managment)
-    - [Connect your Industrial Edge App Publisher](#connect-your-industrial-edge-app-publisher)
-    - [Upload  App using the Industrial Edge App Publisher](#upload-app-using-the-industrial-edge-app-publisher)
-  - [Deploying of App](#deploying-of-app)
-    - [Configuring application](#configuring-application)
-    - [Add additional installation steps here, if required](#add-additional-installation-steps-here-if-required)
-      - [Additional steps](#additional-steps)
+- [Configuration](#configuration)
+  - [Configure PLC Connection](#configure-plc-connection)
+    - [Configure Databus](#configure-databus)
+    - [Configure Ethernet IP Connector](#configure-ethernet-ip-connector)
+  - [Configure Data Service](#configure-data-service)
+  - [Configure Performance Insight](#configure-performance-insight)
+
+## Configure PLC Connection
+
+To read data from a Rockwell PLC and provide the data, we will use the Ethernet IP Connector to establish a connection with the PLC.
+The Ethernet IP Connector sends data to the Databus from where the Data Service can collect and save the needed values.
+In order to build this infrastructure, these apps must be configured properly:
+
+- Databus
+- Ethernet IP Connector
+
+### Configure Databus
+
+The system app Databus is essential to exchange data between a PLC and the Industrial Edge Device.
+
+- Open the Industrial Edge Management web interface
+- Go to "Data Connections" > IE Databus
+- Select the corresponding Industrial Edge Device
+- Create a new user with username and password and give the user publish and subscribe permission
+- Create this topic `"ie/#"`
+- Deploy the databus configuration and wait for the job to be finished successfully
+
+![Databus](graphics/Databus.png)
+
+### Configure Ethernet IP Connector
+
+To use the app Ethernet IP Connector properly (which has no web ui), the corresponding app Ethernet IP Configurator is necessary.
+Here the connection to the Rockwell PLC can be configured.
+
+- Open the Industrial Edge Device web interface
+- Make sure that the app Ethernet IP Connector is running
+- Open the app Ethernet IP Configurator
+- Add the Rockwell PLC as data source
+
+![Source](graphics/ethernet_ip_source.png)
+
+- Configure the user settings
   
-## Build application
+![Settings](graphics/ethernet_ip_settings.png)
 
-### Cloning image
+- Add all needed tags
 
-- Clone or Download the source code to your engineering VM
+![Tags](graphics/ethernet_ip_tags.png)
 
-### Build docker image
+- Deploy the configuration
+- Start the project
 
-Add instruction how to build your application, e.g.:
+## Configure Data Service
 
-- Open console in the source code folder
-- Use command `docker-compose build` to create the docker image.
-- This docker image can now be used to build you app with the Industrial Edge App Publisher
-- *docker images | grep scannerapp* can be used to check for the images
-- You should get a result similiar to this:
+The app Data Service collects the data out of the Ethernet IP Connector and stores it for a defined time period.
+This is a prerequisite for other apps like Performance Insight.
 
-## Upload  App to the Industrial Edge Managment
+- Open the Industrial Edge Device web interface
+- Open the app Data Service
+- Go to the adapter settings and select "Ethernet IP Connector"
+- Enter the username and password for the databus user
+- Activate the adapter
 
-Please find below a short description how to publish your application in your IEM.
+![DataServiceAdapter](graphics/DataService_Adapter.png)
 
-For more detailed information please see the section for [uploading apps to the IEM](https://github.com/industrial-edge/upload-app-to-iem).
+- Go to the assets view and add new variables for data, comming from the Ethernet IP Connector
 
-### Connect your Industrial Edge App Publisher
+![DataServiceAdapter](graphics/DataService_Add.png)
 
-- Connect your Industrial Edge App Publisher to your docker engine
-- Connect your Industrial Edge App Publisher to your Industrial Edge Managment System
+![DataServiceAdapter](graphics/DataService_Variables.png)
 
-### Upload  App using the Industrial Edge App Publisher
+## Configure Performance Insight
 
-- Create a new application using the Industrial Publisher
-- Add a app new version
-- Import the [docker-compose](../docker-compose.yml) file using the **Import YAML** button
-- The warning `Build (sevices >> scanner-service) is not supported` can be ignored
-- **Start Upload** to transfer the app to Industrial Edge Managment
-- Further information about using the Industrial Edge App Publisher can be found in the [IE Hub](https://iehub.eu1.edge.siemens.cloud/documents/appPublisher/en/start.html)
+The app Performance Insight is used to visualize the data comming from the Rockwell PLC.
 
-## Deploying of App
+- Open the app Performance Insight
+- In the view "My Plant", create a new dashboard
+- Add a new widget "Value" for the parameter `floaty`
+- Add a new widget "Diagram" for the parameter `counter`
 
-### Configuring application
-
-If your app needs additional configuration you can add further description here, e.g.
-
->**param.json**
->
->     {
->        "Parameter1": "Siemens AG",
->        "Parameter2": "edge",
->        "Parameter3": "edge",
->     }
-
-Add description of the configuration here:
-
-### Add additional installation steps here, if required
-
-#### Additional steps
-
-Add description here
+![PerformanceInsight](graphics/PerformanceInsight.png)
