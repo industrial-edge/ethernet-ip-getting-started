@@ -1,6 +1,6 @@
 # Ethernet IP application example
 
-This example provides a getting started guide, which shows how to use the Industrial Edge app "Ethernet IP Connector".
+This example provides a getting started guide, which shows how to use the Industrial Edge app Ethernet IP Connector.
 
 - [Ethernet IP application example](#ethernet-ip-application-example)
   - [Description](#description)
@@ -20,13 +20,13 @@ This example provides a getting started guide, which shows how to use the Indust
 
 ### Overview
 
-This application example describes how to get the data from a Rockwell PLC using the app Ethernet IP Connector (with its respective configurator). The data flow goes through different applications, starting with the data acquisition. Therefore the Ethernet IP Connector is used which writes all topics to the IE Databus. The Data Service subscribes to all those topics and stores the values in the database. Finally the values are visualized using Performance Insight.
+This application example describes how to get the data from a Rockwell PLC using the app Ethernet IP Connector with its respective configurator. The data flow goes through different applications, starting with the data acquisition. Therefore, the Ethernet IP Connector is used which writes all topics to the IE Databus. The Data Service subscribes to all those topics and stores the values in the database. Finally, the values are visualized using Performance Insight.
 
 ![Overview](docs/graphics/overview-eip.png)
 
 ### General task
 
-The example reads and writes data from a CompactLogix Rockwell PLC using the Ethernet IP Connector. The data is published on the IE Databus. The Data Service monitors the bus and collect the shopfloor data. First an adapter, providing datapoints must be assigned and configured. Afterwards the data structure can be modeled using assets and aspects. See [data-service-how-to](https://github.com/industrial-edge/data-service-configure-s7-adapter-to-collect-data) for further explanation. This data is collected, saved for individual time periods and transfered for further processing (using Performance Insight).
+The example reads data from a CompactLogix Rockwell PLC using the Ethernet IP Connector. The data is published on the IE Databus. The Data Service monitors the bus and collects the shopfloor data. Therefore, the appropriate adapter for the Ethernet IP Connector must be configured in the Data Service. This data can now be used by the app Performance Insight to visualize the data. See [data-service-how-to](https://github.com/industrial-edge/data-service-configure-s7-adapter-to-collect-data) for further information regarding the Data Service.
 
 ## Requirements
 
