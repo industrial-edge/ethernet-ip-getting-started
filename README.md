@@ -22,7 +22,7 @@ This example provides a getting started guide, which shows how to use the Indust
 
 This application example describes how to get the data from a Rockwell PLC using the app Ethernet IP Connector (with its respective configurator). The data flow goes through different applications, starting with the data acquisition. Therefore the Ethernet IP Connector is used which writes all topics to the IE Databus. The Data Service subscribes to all those topics and stores the values in the database. Finally the values are visualized using Performance Insight.
 
-![Overview](docs/graphics/overview-eip.png)
+![Overview](./docs/graphics/overview-eip.png)
 
 ### General task
 
@@ -61,11 +61,11 @@ The example reads and writes data from a CompactLogix Rockwell PLC using the Eth
 
 The used TIA Portal project can be found in the [sources folder](./src) under the following name:
 
-[compactlogix-demo-29042021.7z](src/compactlogix-demo-29042021.7z)
+[compactlogix-demo-29042021.7z](./src/compactlogix-demo-29042021.7z)
 
 ## Configuration steps
 
-You can find further information about the following steps in the [Configuration](docs/Installation.md) documentation.
+You can find further information about the following steps in the [Configuration](./docs/Installation.md) documentation.
 
 - Configure PLC Connection (Databus, EthernetIP Connector)
 - Configure Configure Data Service
@@ -90,4 +90,4 @@ Thanks for your interest in contributing. Anybody is free to report bugs, unclea
 
 ## Licence and Legal Information
 
-Please read the [Legal information](LICENSE.md).
+Please read the [Legal information](./LICENSE.md).
