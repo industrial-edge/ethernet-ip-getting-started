@@ -51,7 +51,7 @@ The example reads data from a CompactLogix Rockwell PLC using the Ethernet IP Co
   - IE Databus Configurator V 1.2.23
   - Ethernet IP Connector V 1.1.0
   - Ethernet IP Configurator V 1.1.0
-  - Data Service V 1.1.1
+  - Data Service V 1.2.0
   - Performance Insight V 1.2.1
 - Industrial Edge Device (OS) V 1.2.0-56
 - Studio 5000 Logix Designer V 32.00
