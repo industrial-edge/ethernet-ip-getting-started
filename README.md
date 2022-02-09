@@ -46,9 +46,9 @@ The example reads data from a CompactLogix Rockwell PLC using the Ethernet IP Co
 
 ### Used components
 
-- Industrial Edge Management (IEM) V 1.2.14 (OS) V 1.2.0-36
+- Industrial Edge Management (IEM) V 1.2.16 (OS) V 1.2.0-36
   - IE Databus V 1.2.16
-  - IE Databus Configurator V 1.2.23
+  - IE Databus Configurator V 1.2.29
   - Ethernet IP Connector V 1.1.0
   - Ethernet IP Configurator V 1.1.0
   - Data Service V 1.2.0
