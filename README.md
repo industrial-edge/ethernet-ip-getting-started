@@ -20,7 +20,12 @@ This example provides a getting started guide, which shows how to use the Indust
 
 ### Overview
 
-This application example describes how to get the data from a Rockwell PLC using the app Ethernet IP Connector with its respective configurator. The data flow goes through different applications, starting with the data acquisition. Therefore, the Ethernet IP Connector is used which writes all topics to the IE Databus. The Data Service subscribes to all those topics and stores the values in the database. Finally, the values are visualized using Performance Insight.
+This tutorial shows how to use the Industrial Edge applications Ethernet IP Connector to establish a connection between an Industrial Edge Device (IED) and a Rockwell PLC to transfer data from/to the PLC. These PLC variants are supported:
+
+* xxx
+* xxx
+
+On the Industrial Edge Device (IED), the data is published to the Databus. From there the data can be used within other Edge apps, e.g. the Flow Creator.
 
 ![Overview](/docs/graphics/overview-eip.png)
 
