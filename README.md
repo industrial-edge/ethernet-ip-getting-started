@@ -20,47 +20,47 @@ This example provides a getting started guide, which shows how to use the Indust
 
 ### Overview
 
-This tutorial shows how to use the Industrial Edge applications Ethernet IP Connector to establish a connection between an Industrial Edge Device (IED) and a Rockwell PLC to transfer data from/to the PLC. These PLC variants are supported:
+This tutorial shows how to use the Industrial Edge applications Ethernet IP Connector to establish a connection between an Industrial Edge Device (IED) and a 3rd party PLC that supports **EtherNet/IP**. These PLC variants are supported:
 
-* xxx
-* xxx
+* Allen-Bradley ControlLogix (Rockwell)
+* Allen-Bradley CompactLogix (Rockwell)
+* Allen-Bradley MicroLogix (Rockwell)
+* Allen-Bradley SLC (Rockwell)
+* Omron CJ1 Series PLCs
+* Omron CJ2 Series PLCs
+* Omron CS1 Series PLCs
 
-On the Industrial Edge Device (IED), the data is published to the Databus. From there the data can be used within other Edge apps, e.g. the Flow Creator.
-
-![Overview](/docs/graphics/overview-eip.png)
+The Ethernet IP Connector is an application that runs on the individual IED. Connections can be configured using the Common Configurator for Industrial Edge. The connector transfers the value series of selected data points from a PLC to the Databus. From there the data can be used within other Edge apps, e.g. the Flow Creator.
 
 ### General task
 
-The example reads data from a CompactLogix Rockwell PLC using the Ethernet IP Connector. The data is published on the IE Databus. The Data Service monitors the bus and collects the shopfloor data. Therefore, the appropriate adapter for the Ethernet IP Connector must be configured in the Data Service. This data can now be used by the app Performance Insight to visualize the data. See [data-service-how-to](https://github.com/industrial-edge/data-service-configure-s7-adapter-to-collect-data) for further information regarding the Data Service.
+Here we configure a connection to a CompactLogix PLC using the Ethernet IP Connector. The data is published on the IE Databus. By using the application IE Flow Creator, we fetch the metadata of the Ethernet IP Connector, write some data on the configured tags and read out the new data.
+
+![Overview](/docs/graphics/overview-eip.png)
 
 ## Requirements
 
 ### Prerequisites
 
-- Access to an Industrial Edge Management System (IEM)
-- Onboarded Industial Edge Device on IEM
-- Installed System Configurator for Databus on IEM
-- Installed System App Databus on Edge Device
-- Installed Ethernet IP Configurator on Edge Device
-- Installed Ethernet IP Connector on Edge Device
-- Installed Data Service on Edge Device
-- Installed Performance Insight on Edge Device
-- Edge device is connected to Rockwell PLC CompactLogix5370
-- Studio 5000 project loaded on PLC (e.g. for counting application)
-- HTML5-capable Internet browser
+- Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
+- IEM: Installed system configurator for Databus
+- IED: Installed system app Databus
+- IED: Installed app Ethernet IP Connector
+- IED: Installed app IE Flow Creator
+- IED is connected to the Rockwell PLC CompactLogix via Ethernet
+- Studio 5000 project loaded on PLC
+- Google Chrome (Version ≥ 72)
 
 ### Used components
 
-- Industrial Edge Management (IEM) V 1.2.16 (OS) V 1.2.0-36
-  - IE Databus V 1.2.16
-  - IE Databus Configurator V 1.2.29
-  - Ethernet IP Connector V 1.1.0
-  - Ethernet IP Configurator V 1.1.0
-  - Data Service V 1.2.0
-  - Performance Insight V 1.2.1
-- Industrial Edge Device (OS) V 1.2.0-56
+- Industrial Edge Management (IEM) V 1.5.1-4 / V 1.8.6
+  - IE Databus Configurator V 1.7.8
+- Industrial Edge Device (OS) V 1.8.0-6
+  - IE Databus V 1.7.1
+  - Ethernet IP Connector V 2.0.0-5
+  - IE Flow Creator V 1.3.9
+- PLC: Allen-Bradley CompactLogix
 - Studio 5000 Logix Designer V 32.00
-- CompactLogix 5370 Rev. 32.011
 
 ### Studio 5000 Logix Designer Project
 
