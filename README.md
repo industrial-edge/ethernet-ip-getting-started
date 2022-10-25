@@ -53,18 +53,18 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
 
 ### Used components
 
-- Industrial Edge Management (IEM) V 1.5.1-4 / V 1.8.6
-  - IE Databus Configurator V 1.7.8
-- Industrial Edge Device (OS) V 1.8.0-6
-  - IE Databus V 1.7.1
-  - Ethernet IP Connector V 2.0.0-5
-  - IE Flow Creator V 1.3.9
+- Industrial Edge Management (IEM) V1.5.1-4 / V1.8.6
+  - IE Databus Configurator V1.7.8
+- Industrial Edge Device (OS) V1.8.0-6
+  - IE Databus V1.7.1
+  - Ethernet IP Connector V2.0.0-5
+  - IE Flow Creator V1.3.9
 - PLC: Allen-Bradley CompactLogix
-- Studio 5000 Logix Designer V 32.00
+- Studio 5000 Logix Designer V32.00
 
 ### Studio 5000 Logix Designer Project
 
-The used TIA Portal project can be found in the [sources folder](/src) under the following name:
+The used project for the PLC can be found in the [src](/src) folder:
 
 [compactlogix-demo-29042021.7z](./src/compactlogix-demo-29042021.7z)
 
