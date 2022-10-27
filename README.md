@@ -9,8 +9,7 @@ This example provides a getting started guide, which shows how to use the Indust
   - [Requirements](#requirements)
     - [Prerequisites](#prerequisites)
     - [Used components](#used-components)
-    - [Studio 5000 Logix Designer Project](#studio-5000-logix-designer-project)
-  - [Configuration steps](#configuration-steps)
+  - [Configuration](#configuration)
   - [Usage](#usage)
   - [Documentation](#documentation)
   - [Contribution](#contribution)
@@ -62,23 +61,23 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
 - PLC: Allen-Bradley CompactLogix
 - Studio 5000 Logix Designer V32.00
 
-### Studio 5000 Logix Designer Project
-
-The used project for the PLC can be found in the [src](/src) folder:
-
-[compactlogix-demo-29042021.7z](./src/compactlogix-demo-29042021.7z)
-
-## Configuration steps
+## Configuration
 
 You can find further information about the following steps in the [Configuration](/docs/Installation.md) documentation.
 
-- Configure PLC Connection (Databus, EthernetIP Connector)
-- Configure Configure Data Service
-- Configure Performance Insight
+- [Configure PLC Connection](/docs/Installation.md#configure-plc-connection)
+- [Configure Configure Data Service](/docs/Installation.md#configure-data-service)
+- [Configure Performance Insight](/docs/Installation.md#configure-performance-insight)
 
 ## Usage
 
-Once the Data Service app is configured and data is availalbe from a running Rockwell PLC, process data can be collected. Performance Insight visualizes this data and gives data insights (KPIs, metrics, etc.).
+As soon as the Ethernet IP Connector is configured, data can be transfered.
+
+You can find further information about how to handle the data via the IE Flow Creator in the [Usage](/docs/Usage.md) documentation:
+
+* [Read metadata](/docs/Usage.md#read-metadata)
+* [Write data](/docs/Usage.md#write-data)
+* [Read data](/docs/Usage.md#read-data)
 
 ## Documentation
 
@@ -96,6 +95,6 @@ Additionally everybody is free to propose any changes to this repository using P
 
 If you are interested in contributing via Pull Request, please check the [Contribution License Agreement](Siemens_CLA_1.1.pdf) and forward a signed copy to [industrialedge.industry@siemens.com](mailto:industrialedge.industry@siemens.com?subject=CLA%20Agreement%20Industrial-Edge).
 
-## Licence and Legal Information
+## License and Legal Information
 
-Please read the [Legal information](./LICENSE.md).
+Please read the [Legal information](LICENSE.txt).
