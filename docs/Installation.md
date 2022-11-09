@@ -4,8 +4,7 @@
   - [Overview](#overview)
   - [Install Ethernet IP Connector](#install-ethernet-ip-connector)
   - [Configure IE Databus](#configure-ie-databus)
-  - [Configure IIH Configurator](#configure-iih-configurator)
-  - [Configure Ethernet IP Connector](#configure-ethernet-ip-connector)
+  - [Configure Ethernet IP via IIH Configurator](#configure-ethernet-ip-via-iih-configurator)
 
 ## Overview
 
@@ -28,6 +27,8 @@ The Ethernet IP Connector app must be available in your IEM catalog. Proceed the
 - click 'Install Now'
 - click 'Install' to allow the installation
 
+![app](/docs/graphics/EIP_App.png)
+
 ## Configure IE Databus
 
 The system app Databus is essential to exchange data between a PLC and the IED. The Ethernet IP Connector sends the transfered data to the Databus on the IED. From there the data can be used for further processing.
@@ -47,7 +48,9 @@ Therefore follow these steps:
 
 ![databus](/docs/graphics/Databus.png)
 
-## Configure IIH Configurator
+## Configure Ethernet IP via IIH Configurator
+
+With the IIH Configurator, you can configure several connectors and publish the data to the IE Databus. Therefore, you must enter the Databus credentials within the IIH Configurator:
 
 - open the IED web interface
 - open the app IIH Configurator
@@ -59,19 +62,14 @@ Therefore follow these steps:
 
 ![IIH_Settings](/docs/graphics/IIH_Settings.png)
 
+As soon as the Ethernet IP Connector is installed on the same IED as the IIH Configurator, the connector is visible within the configurator. In this example we want to configure an EtherNet/IP connection to a CompactLogix PLC (Allen-Bradley). To configure the Ethernet IP Connector, proceed as following:
+
 - go to the tab 'Aggregate data' and select tab 'Databus connectors'
+- select "Ethernet IP Connector"
 - **TODO**
 
-## Configure Ethernet IP Connector
 
-**TODO**
 
-To use the app Ethernet IP Connector properly (which has no web ui), the corresponding app Ethernet IP Configurator is necessary.
-Here the connection to the Rockwell PLC can be configured.
-
-- Open the Industrial Edge Device web interface
-- Make sure that the app Ethernet IP Connector is running
-- Open the app Ethernet IP Configurator
 - Add the Rockwell PLC as data source
 
 ![Source](/docs/graphics/ethernet_ip_source.png)
