@@ -41,9 +41,9 @@ You need to create a user and one or more topics in the Databus configuration, w
 Therefore follow these steps:
 
 - open the Industrial Edge Management (IEM)
-- go to "Data Connections" > IE Databus
+- go to 'Data Connections' > IE Databus
 - select the corresponding IED
-- create the topic `"ie/#"`and a dedicated user with username and password ("edge"/"edge"), set permissions to "Publish and Subscribe"
+- create the topic `ie/#`and a dedicated user with username and password ('edge'/'edge'), set permissions to 'Publish and Subscribe'
 - deploy the configuration and wait for the job to be finished successfully
 
 ![databus](/docs/graphics/Databus.png)
@@ -69,21 +69,23 @@ As soon as the Ethernet IP Connector is installed on the same IED as the IIH Con
 
 ![ConnectorOverview](/docs/graphics/IIH_Connector_Overview.png)
 
-- switch to tab "Tags"
-- choose "Add data source"
+- switch to tab 'Tags'
+- choose 'Add data source'
 - configure the PLC accordingly and save
 
 ![Source](/docs/graphics/ethernet_ip_source.png)
 
-- under column "Actions" of the newly created PLC, choose "Add tag"
+- under column 'Actions' of the newly created PLC, choose 'Add tag'
 - configure a tag as needed and save
 
 ![Tags](/docs/graphics/IIH_Tags.png)
 
-- select the newly created PLC and click "Deploy"
+- select the newly created PLC and click 'Deploy'
 
 ![Deploy](/docs/graphics/IIH_Deploy.png)
 
-- back on the overview page "Databus connectors", the status of the Ethernet IP Connector should be shown as **connected**
+- back on the overview page 'Databus connectors', the status of the Ethernet IP Connector should be shown as **connected**
 
 ![Connected](/docs/graphics/IIH_Connected.png)
+
+Now data can be transferred via the SLMP connection. Please find more information in the  [Usage](/docs/Usage.md) documentation.

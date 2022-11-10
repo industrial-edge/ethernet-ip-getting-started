@@ -6,9 +6,9 @@
   - [Read data](#read-data)
   - [Use Data Service](#use-data-service)
   
-Via the IE Flow Creator, we can write and read the Ethernet IP data.
+Via the IE Flow Creator, we can write and read the EtherNet/IP data.
 
-The used flow can be downloaded [here](/src/flow.json) and imported into the IE Flow Creator, that is running on the same IED as the Ethernet IP connector.
+The used flow can be downloaded [here](/src/flow.json) and imported into the IE Flow Creator, that is running on the same IED as the Ethernet IP Connector.
 
 ## Read metadata
 
@@ -24,10 +24,9 @@ To print out the Ethernet IP Connector metadata, follow these steps:
 
 ![metadata](/docs/graphics/Metadata.png)
 
-Now you can see these configured datapoints according to the Ethernet IP settings:
+Now you can see the configured datapoint according to the Ethernet IP settings:
 
-- ***xx*** with unique id 101 **TODO**
-- ***xx*** with unique id 102 **TODO**
+- ***Tag1*** with unique id 102 **TODO**
 
 ## Write data
 

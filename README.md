@@ -67,9 +67,10 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
 
 You can find further information about the following steps in the [Configuration](/docs/Installation.md) documentation.
 
-- [Configure PLC Connection](/docs/Installation.md#configure-plc-connection)
-- [Configure Configure Data Service](/docs/Installation.md#configure-data-service)
-- [Configure Performance Insight](/docs/Installation.md#configure-performance-insight)
+- [Overview](/docs/Installation.md#overview)
+- [Install Ethernet IP Connector](/docs/Installation.md#install-ethernet-ip-connector)
+- [Configure IE Databus](/docs/Installation.md#configure-ie-databus)
+- [Configure Ethernet IP via IIH Configurator](/docs/Installation.md#configure-ethernet-ip-via-iih-configurator)
 
 ## Usage
 
