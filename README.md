@@ -81,6 +81,7 @@ You can find further information about how to handle the data via the IE Flow Cr
 * [Read metadata](/docs/Usage.md#read-metadata)
 * [Write data](/docs/Usage.md#write-data)
 * [Read data](/docs/Usage.md#read-data)
+* [Use Data Service](/docs/Usage.md#use-data-service)
 
 ## Documentation
 
