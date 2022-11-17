@@ -60,6 +60,7 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
   - Registry Service V 1.4.0
   - Ethernet IP Connector V2.0.0-5
   - IE Flow Creator V1.3.9
+  - Data Service V1.4.0
 - PLC: Allen-Bradley CompactLogix
 - Studio 5000 Logix Designer V32.00
 
