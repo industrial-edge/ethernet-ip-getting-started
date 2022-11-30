@@ -56,17 +56,17 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
   - IE Databus Configurator V1.7.8
 - Industrial Edge Device (OS) V1.8.0-6
   - IE Databus V1.7.1
-  - IIH Configurator V 1.4.0-1
-  - Registry Service V 1.4.0
+  - IIH Configurator V1.5.0
+  - Registry Service V1.5.0
   - Ethernet IP Connector V2.0.0-5
-  - IE Flow Creator V1.3.9
-  - Data Service V1.4.0
+  - IE Flow Creator V1.10.0-3
+  - Data Service V1.5.0
 - PLC: Allen-Bradley CompactLogix
 - Studio 5000 Logix Designer V32.00
 
 ## Configuration
 
-You can find further information about the following steps in the [Configuration](/docs/Installation.md) documentation.
+You can find further information about the following steps in the [Configuration](/docs/Installation.md) documentation:
 
 - [Overview](/docs/Installation.md#overview)
 - [Install Ethernet IP Connector](/docs/Installation.md#install-ethernet-ip-connector)
