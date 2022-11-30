@@ -54,7 +54,7 @@ With the IIH Configurator, you can configure several connectors and publish the 
 
 - open the IED web interface
 - open the app IIH Configurator
-- go to the tab 'Settings'
+- go to the tab 'Settings' and select the menu 'Databus credentials'
 - enter the databus service name: 'ie-databus:1883'
 - in tab 'Data Publisher settings' enter the databus user name and password ('edge'/'edge')
 - in tab 'Data Subscriber settings' enter the databus user name and password ('edge'/'edge')
@@ -62,9 +62,9 @@ With the IIH Configurator, you can configure several connectors and publish the 
 
 ![IIH_Settings](/docs/graphics/IIH_Settings.png)
 
-As soon as the Ethernet IP Connector is installed on the same IED as the IIH Configurator, the connector is visible within the configurator. In this example we want to configure an EtherNet/IP connection to a CompactLogix PLC (Allen-Bradley). To configure the Ethernet IP Connector, proceed as following:
+As soon as the Ethernet IP Connector is installed and started on the same IED as the IIH Configurator, the connector is visible within the configurator. In this example we want to configure an EtherNet/IP connection to a CompactLogix PLC (Allen-Bradley). To configure the Ethernet IP Connector, proceed as following:
 
-- go to the tab 'Aggregate data' and select tab 'Databus connectors'
+- go to the tab 'Get data' and select tab 'Databus connectors'
 - select the Ethernet IP Connector
 
 ![ConnectorOverview](/docs/graphics/IIH_Connector_Overview.png)
