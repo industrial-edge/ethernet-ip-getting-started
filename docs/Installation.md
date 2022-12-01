@@ -88,4 +88,4 @@ As soon as the Ethernet IP Connector is installed and started on the same IED as
 
 ![Connected](/docs/graphics/IIH_Connected.png)
 
-Now data can be transferred via the SLMP connection. Please find more information in the  [Usage](/docs/Usage.md) documentation.
+Now data can be transferred via the Ethernet IP connection. Please find more information in the  [Usage](/docs/Usage.md) documentation.
