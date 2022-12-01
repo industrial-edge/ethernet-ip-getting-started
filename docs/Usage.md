@@ -35,7 +35,7 @@ To write some data on the Ethernet IP tag, you must fetch the tag ID from metada
 - for the tag ***Tag1***, create an inject node with this JSON payload: `{ "vals": [ { "id": "102", "val": "111" } ] }`
 - create a mqtt out node
 - set the server to 'ie-databus' with port 1883 and corresponding user name/password ('edge'/'edge')
-- set the topic to `ie/d/j/simatic/v1/eip1/dp/w/CompactLogix`
+- set the topic to `ie/d/j/simatic/v1/eip1/dp/w/CompactLogix/default`
 - connect the inject node to the mqtt out node
 - deploy the flow
 - click the inject button, to write the value
