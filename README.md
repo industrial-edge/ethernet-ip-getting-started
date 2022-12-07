@@ -9,6 +9,7 @@ This example provides a getting started guide, which shows how to use the Indust
   - [Requirements](#requirements)
     - [Prerequisites](#prerequisites)
     - [Used components](#used-components)
+    - [PLC project](#plc-project)
   - [Configuration](#configuration)
   - [Usage](#usage)
   - [Documentation](#documentation)
@@ -63,6 +64,10 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
   - Data Service V1.5.0
 - PLC: Allen-Bradley CompactLogix
 - Studio 5000 Logix Designer V32.00
+
+### PLC project
+
+The used PLC project *Test.ACD* can be found in the [src folder](/src/).
 
 ## Configuration
 
