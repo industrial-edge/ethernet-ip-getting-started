@@ -26,9 +26,9 @@ To print out the Ethernet IP Connector metadata, follow these steps:
 
 Now you can see the configured datapoint according to the Ethernet IP settings:
 
-- ***Counter_INT*** with unique id 102
-- ***Var_BOOL*** with unique id 103
-- ***Var_REAL*** with unique id 104
+- ***Counter_INT*** with unique id **102**
+- ***Var_BOOL*** with unique id **103**
+- ***Var_REAL*** with unique id **104**
 
 ## Read data
 
@@ -43,13 +43,13 @@ To print out the transfered Ethernet IP Connector data, follow these steps:
 
 ![read_data_flow](/docs/graphics/Read_Data_Flow.png)
 
-Since the read payload only contains the tag ID and not the tag name, you need to assign the tag ID according to the metadata. Here the parameter ***Counter_INT*** (tag ID 102) is incremented automatically by the PLC, so we can read each single value:
+Since the read payload only contains the tag ID and not the tag name, you need to assign the tag ID according to the metadata. Here the parameter ***Counter_INT*** (tag ID **102**) is incremented automatically by the PLC, so we can read each single value:
 
 ![read_int](/docs/graphics/Read_Int.png)
 
 ## Write data
 
-To write some data on the Ethernet IP tag, you must fetch the tag ID from metadata payload based on the tag name. Here we want to write to the parameter ***Var_REAL*** (tag ID 104). Please follow these steps:
+To write some data on the Ethernet IP tag, you must fetch the tag ID from metadata payload based on the tag name. Here we want to write to the parameter ***Var_REAL*** (tag ID **104**). Please follow these steps:
 
 - create an inject node with this JSON payload: `{ "vals": [ { "id": "104", "val": "111" } ] }`
 - create a mqtt out node
