@@ -1,83 +1,91 @@
 # Configuration
 
 - [Configuration](#configuration)
-  - [Configure PLC Connection](#configure-plc-connection)
-    - [Configure Databus](#configure-databus)
-    - [Configure Ethernet IP Connector](#configure-ethernet-ip-connector)
-  - [Configure Data Service](#configure-data-service)
-  - [Configure Performance Insight](#configure-performance-insight)
+  - [Overview](#overview)
+  - [Install Ethernet IP Connector](#install-ethernet-ip-connector)
+  - [Configure IE Databus](#configure-ie-databus)
+  - [Configure Ethernet IP via IIH Configurator](#configure-ethernet-ip-via-iih-configurator)
 
-## Configure PLC Connection
+## Overview
 
-To read data from a Rockwell PLC and provide the data, we will use the Ethernet IP Connector to establish a connection with the PLC.
-The Ethernet IP Connector sends data to the Databus from where the Data Service can collect and save the needed values.
-In order to build this infrastructure, these apps must be configured properly:
+When working with connectors on Industrial Edge, the **IE Databus** app is required to exchange the data via MQTT. The configuration of the connectors is done via the **IIH Configurator** app. Therefore also the **Registry Service** app is necessary, to find installed connectors on an Industrial Edge Device.
 
-- Databus
-- Ethernet IP Connector
+Make sure the following apps are installed and running on the Industrial Edge Device (IED):
+- IE Databus
+- IIH Configurator
+- Registry Service
 
-### Configure Databus
+## Install Ethernet IP Connector
 
-The system app Databus is essential to exchange data between a PLC and the Industrial Edge Device.
+The Ethernet IP Connector app must be available in your IEM catalog. Proceed the following steps to install the app on your IED:
 
-- Open the Industrial Edge Management web interface
-- Go to "Data Connections" > IE Databus
-- Select the corresponding Industrial Edge Device
-- Create a new user with username and password and give the user publish and subscribe permission
-- Create this topic `"ie/#"`
-- Deploy the databus configuration and wait for the job to be finished successfully
+- open the catalog in the IEM
+- select the Ethernet IP Connector
+- click 'Install'
+- in the tab 'Configurations' click 'Next'
+- in the tab 'Devices' choose your IED
+- click 'Install Now'
+- click 'Install' to allow the installation
 
-![Databus](/docs/graphics/Databus.png)
+![app](/docs/graphics/EIP_App.png)
 
-### Configure Ethernet IP Connector
+## Configure IE Databus
 
-To use the app Ethernet IP Connector properly (which has no web ui), the corresponding app Ethernet IP Configurator is necessary.
-Here the connection to the Rockwell PLC can be configured.
+The system app Databus is essential to exchange data between a PLC and the IED. The Ethernet IP Connector sends the transfered data to the Databus on the IED. From there the data can be used for further processing.
 
-- Open the Industrial Edge Device web interface
-- Make sure that the app Ethernet IP Connector is running
-- Open the app Ethernet IP Configurator
-- Add the Rockwell PLC as data source
+You need to create a user and one or more topics in the Databus configuration, which cover the Ethernet IP data:
+
+- ***ie/m/j/simatic/v1/eip1/dp*** for Ethernet IP metadata
+- ***ie/d/j/simatic/v1/eip1/dp*** for Ethernet IP data
+
+Therefore follow these steps:
+
+- open the Industrial Edge Management (IEM)
+- go to 'Data Connections' > IE Databus
+- select the corresponding IED
+- create the topic `ie/#`and a dedicated user with username and password ('edge'/'edge'), set permissions to 'Publish and Subscribe'
+- deploy the configuration and wait for the job to be finished successfully
+
+![databus](/docs/graphics/Databus.png)
+
+## Configure Ethernet IP via IIH Configurator
+
+With the IIH Configurator, you can configure several connectors and publish the data to the IE Databus. Therefore, you must enter the Databus credentials within the IIH Configurator:
+
+- open the IED web interface
+- open the app IIH Configurator
+- go to the tab 'Settings' and select the menu 'Databus credentials'
+- enter the databus service name: 'ie-databus:1883'
+- in tab 'Data Publisher settings' enter the databus user name and password ('edge'/'edge')
+- in tab 'Data Subscriber settings' enter the databus user name and password ('edge'/'edge')
+- Save the settings
+
+![IIH_Settings](/docs/graphics/IIH_Settings.png)
+
+As soon as the Ethernet IP Connector is installed and started on the same IED as the IIH Configurator, the connector is visible within the configurator. In this example we want to configure an EtherNet/IP connection to a CompactLogix PLC (Allen-Bradley). To configure the Ethernet IP Connector, proceed as following:
+
+- go to the tab 'Get data' and select tab 'Databus connectors'
+- select the Ethernet IP Connector
+
+![ConnectorOverview](/docs/graphics/IIH_Connector_Overview.png)
+
+- switch to tab 'Tags'
+- choose 'Add data source'
+- configure the PLC accordingly and save
 
 ![Source](/docs/graphics/ethernet_ip_source.png)
 
-- Configure the user settings
-  
-![Settings](graphics/ethernet_ip_settings.png)
+- under column 'Actions' of the newly created PLC, choose 'Add tag'
+- configure a tag as needed and save
 
-- Add all needed tags
+![Tags](/docs/graphics/IIH_Tags.png)
 
-![Tags](/docs/graphics/ethernet_ip_tags.png)
+- select the newly created PLC and click 'Deploy'
 
-- Deploy the configuration
-- Start the project
+![Deploy](/docs/graphics/IIH_Deploy.png)
 
-## Configure Data Service
+- back on the overview page 'Databus connectors', the status of the Ethernet IP Connector should be shown as **connected**
 
-The app Data Service collects the data out of the Ethernet IP Connector and stores it for a defined time period.
-This is a prerequisite for other apps like Performance Insight.
+![Connected](/docs/graphics/IIH_Connected.png)
 
-- Open the Industrial Edge Device web interface
-- Open the app Data Service
-- Go to the adapter settings and select "Ethernet IP Connector"
-- Enter the username and password for the databus user
-- Activate the adapter
-
-![DataServiceAdapter](/docs/graphics/DataService_Adapter.png)
-
-- Go to the assets view and add new variables for data, comming from the Ethernet IP Connector
-
-![DataServiceAdapter](/docs/graphics/DataService_Add.png)
-
-![DataServiceAdapter](/docs/graphics/DataService_Variables.png)
-
-## Configure Performance Insight
-
-The app Performance Insight is used to visualize the data comming from the Rockwell PLC.
-
-- Open the app Performance Insight
-- In the view "My Plant", create a new dashboard
-- Add a new widget "Value" for the parameter `floaty`
-- Add a new widget "Diagram" for the parameter `counter`
-
-![PerformanceInsight](/docs/graphics/PerformanceInsight.png)
+Now data can be transferred via the Ethernet IP connection. Please find more information in the  [Usage](/docs/Usage.md) documentation.

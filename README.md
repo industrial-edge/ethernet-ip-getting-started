@@ -9,8 +9,8 @@ This example provides a getting started guide, which shows how to use the Indust
   - [Requirements](#requirements)
     - [Prerequisites](#prerequisites)
     - [Used components](#used-components)
-    - [Studio 5000 Logix Designer Project](#studio-5000-logix-designer-project)
-  - [Configuration steps](#configuration-steps)
+    - [PLC project](#plc-project)
+  - [Configuration](#configuration)
   - [Usage](#usage)
   - [Documentation](#documentation)
   - [Contribution](#contribution)
@@ -20,60 +20,74 @@ This example provides a getting started guide, which shows how to use the Indust
 
 ### Overview
 
-This application example describes how to get the data from a Rockwell PLC using the app Ethernet IP Connector with its respective configurator. The data flow goes through different applications, starting with the data acquisition. Therefore, the Ethernet IP Connector is used which writes all topics to the IE Databus. The Data Service subscribes to all those topics and stores the values in the database. Finally, the values are visualized using Performance Insight.
+This tutorial shows how to use the Industrial Edge applications Ethernet IP Connector to establish a connection between an Industrial Edge Device (IED) and a 3rd party PLC that supports **EtherNet/IP**. These PLC variants are supported:
 
-![Overview](/docs/graphics/overview-eip.png)
+* Allen-Bradley ControlLogix (Rockwell)
+* Allen-Bradley CompactLogix (Rockwell)
+* Allen-Bradley MicroLogix (Rockwell)
+* Allen-Bradley SLC (Rockwell)
+* Omron CJ1 Series PLCs
+* Omron CJ2 Series PLCs
+* Omron CS1 Series PLCs
+
+The Ethernet IP Connector is an application that runs on the individual IED. Connections can be configured using the Common Configurator for Industrial Edge. The connector transfers the value series of selected data points from a PLC to the Databus. From there the data can be used within other Edge apps, e.g. the Flow Creator.
 
 ### General task
 
-The example reads data from a CompactLogix Rockwell PLC using the Ethernet IP Connector. The data is published on the IE Databus. The Data Service monitors the bus and collects the shopfloor data. Therefore, the appropriate adapter for the Ethernet IP Connector must be configured in the Data Service. This data can now be used by the app Performance Insight to visualize the data. See [data-service-how-to](https://github.com/industrial-edge/data-service-configure-s7-adapter-to-collect-data) for further information regarding the Data Service.
+Here we configure a connection to a CompactLogix PLC using the Ethernet IP Connector. The data is published on the IE Databus. By using the application IE Flow Creator, we fetch the metadata of the Ethernet IP Connector, write some data on the configured tags and read out the new data.
+
+![Overview](/docs/graphics/overview-eip.png)
 
 ## Requirements
 
 ### Prerequisites
 
-- Access to an Industrial Edge Management System (IEM)
-- Onboarded Industial Edge Device on IEM
-- Installed System Configurator for Databus on IEM
-- Installed System App Databus on Edge Device
-- Installed Ethernet IP Configurator on Edge Device
-- Installed Ethernet IP Connector on Edge Device
-- Installed Data Service on Edge Device
-- Installed Performance Insight on Edge Device
-- Edge device is connected to Rockwell PLC CompactLogix5370
-- Studio 5000 project loaded on PLC (e.g. for counting application)
-- HTML5-capable Internet browser
+- Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
+- IEM: Installed system configurator for Databus
+- IED: Installed system app Databus
+- IED: Installed app Ethernet IP Connector
+- IED: Installed app IE Flow Creator
+- IED is connected to the Rockwell PLC CompactLogix via Ethernet
+- Studio 5000 project loaded on PLC
+- Google Chrome (Version ≥ 72)
 
 ### Used components
 
-- Industrial Edge Management (IEM) V 1.2.16 (OS) V 1.2.0-36
-  - IE Databus V 1.2.16
-  - IE Databus Configurator V 1.2.29
-  - Ethernet IP Connector V 1.1.0
-  - Ethernet IP Configurator V 1.1.0
-  - Data Service V 1.2.0
-  - Performance Insight V 1.2.1
-- Industrial Edge Device (OS) V 1.2.0-56
-- Studio 5000 Logix Designer V 32.00
-- CompactLogix 5370 Rev. 32.011
+- Industrial Edge Management (IEM) V1.5.1-4 / V1.8.6
+  - IE Databus Configurator V1.7.8
+- Industrial Edge Device (OS) V1.8.0-6
+  - IE Databus V1.7.1
+  - IIH Configurator V1.5.0
+  - Registry Service V1.5.0
+  - Ethernet IP Connector V2.0.0-5
+  - IE Flow Creator V1.10.0-3
+  - Data Service V1.5.0
+- PLC: Allen-Bradley CompactLogix
+- Studio 5000 Logix Designer V32.00
 
-### Studio 5000 Logix Designer Project
+### PLC project
 
-The used TIA Portal project can be found in the [sources folder](/src) under the following name:
+The used PLC project *Test.ACD* can be found in the [src folder](/src/).
 
-[compactlogix-demo-29042021.7z](./src/compactlogix-demo-29042021.7z)
+## Configuration
 
-## Configuration steps
+You can find further information about the following steps in the [Configuration](/docs/Installation.md) documentation:
 
-You can find further information about the following steps in the [Configuration](/docs/Installation.md) documentation.
-
-- Configure PLC Connection (Databus, EthernetIP Connector)
-- Configure Configure Data Service
-- Configure Performance Insight
+- [Overview](/docs/Installation.md#overview)
+- [Install Ethernet IP Connector](/docs/Installation.md#install-ethernet-ip-connector)
+- [Configure IE Databus](/docs/Installation.md#configure-ie-databus)
+- [Configure Ethernet IP via IIH Configurator](/docs/Installation.md#configure-ethernet-ip-via-iih-configurator)
 
 ## Usage
 
-Once the Data Service app is configured and data is availalbe from a running Rockwell PLC, process data can be collected. Performance Insight visualizes this data and gives data insights (KPIs, metrics, etc.).
+As soon as the Ethernet IP Connector is configured, data can be transfered.
+
+You can find further information about how to handle the data via the IE Flow Creator in the [Usage](/docs/Usage.md) documentation:
+
+* [Read metadata](/docs/Usage.md#read-metadata)
+* [Write data](/docs/Usage.md#write-data)
+* [Read data](/docs/Usage.md#read-data)
+* [Use Data Service](/docs/Usage.md#use-data-service)
 
 ## Documentation
 
@@ -91,6 +105,6 @@ Additionally everybody is free to propose any changes to this repository using P
 
 If you are interested in contributing via Pull Request, please check the [Contribution License Agreement](Siemens_CLA_1.1.pdf) and forward a signed copy to [industrialedge.industry@siemens.com](mailto:industrialedge.industry@siemens.com?subject=CLA%20Agreement%20Industrial-Edge).
 
-## Licence and Legal Information
+## License and Legal Information
 
-Please read the [Legal information](./LICENSE.md).
+Please read the [Legal information](LICENSE.txt).
