@@ -2,8 +2,8 @@
 
 - [Usage](#usage)
   - [Read metadata](#read-metadata)
-  - [Write data](#write-data)
   - [Read data](#read-data)
+  - [Write data](#write-data)
   - [Use Data Service](#use-data-service)
   
 Via the IE Flow Creator, we can write and read the EtherNet/IP data.
@@ -26,25 +26,13 @@ To print out the Ethernet IP Connector metadata, follow these steps:
 
 Now you can see the configured datapoint according to the Ethernet IP settings:
 
-- ***Tag1*** with unique id 102
-
-## Write data
-
-To write some data on the Ethernet IP tag, you must fetch the tag ID from metadata payload based on the tag name. Please follow these steps:
-
-- for the tag ***Tag1***, create an inject node with this JSON payload: `{ "vals": [ { "id": "102", "val": "111" } ] }`
-- create a mqtt out node
-- set the server to 'ie-databus' with port 1883 and corresponding user name/password ('edge'/'edge')
-- set the topic to `ie/d/j/simatic/v1/eip1/dp/w/CompactLogix`
-- connect the inject node to the mqtt out node
-- deploy the flow
-- click the inject button, to write the value
-
-![write_data_flow](/docs/graphics/Write_Data_Flow.png)
+- ***Counter_INT*** with unique id 102
+- ***Var_BOOL*** with unique id 103
+- ***Var_REAL*** with unique id 104
 
 ## Read data
 
-To print out the transfered Ethernet IP Connector data, you must fetch the tag ID from metadata payload based on the tag name. Please follow these steps:
+To print out the transfered Ethernet IP Connector data, follow these steps:
 
 - create a mqtt in node
 - set the server to "ie-databus" with port 1883 and corresponding user name/password ('edge'/'edge')
@@ -55,9 +43,25 @@ To print out the transfered Ethernet IP Connector data, you must fetch the tag I
 
 ![read_data_flow](/docs/graphics/Read_Data_Flow.png)
 
-Output for tag ***Tag1*** with ID 102:
+Since the read payload only contains the tag ID and not the tag name, you need to assign the tag ID according to the metadata. Here the parameter ***Counter_INT*** (tag ID 102) is incremented automatically by the PLC, so we can read each single value:
 
 ![read_int](/docs/graphics/Read_Int.png)
+
+## Write data
+
+To write some data on the Ethernet IP tag, you must fetch the tag ID from metadata payload based on the tag name. Here we want to write to the parameter ***Var_REAL*** (tag ID 104). Please follow these steps:
+
+- create an inject node with this JSON payload: `{ "vals": [ { "id": "104", "val": "111" } ] }`
+- create a mqtt out node
+- set the server to 'ie-databus' with port 1883 and corresponding user name/password ('edge'/'edge')
+- set the topic to `ie/d/j/simatic/v1/eip1/dp/w/CompactLogix`
+- connect the inject node to the mqtt out node
+- deploy the flow
+- click the inject button, to write the value
+
+![write_data_flow](/docs/graphics/Write_Data_Flow.png)
+
+![write_int](/docs/graphics/Write_Int.png)
 
 ## Use Data Service
 
@@ -73,7 +77,7 @@ To activate the data transfer from the Ethernet IP Connector, proceed as followi
 
 ![DataServiceAdapter](/docs/graphics/DataService_Adapter.png)
 
-- go to tab 'Assets & Connectivity' and add the variable, that was configured within the Ethernet IP Connector
+- go to tab 'Assets & Connectivity' and add the variables, that were configured within the Ethernet IP Connector
 
 ![DataServiceAdapter](/docs/graphics/DataService_Add.png)
 
