@@ -34,7 +34,7 @@ The Ethernet IP Connector is an application that runs on the individual IED. Con
 
 ### General task
 
-Here we configure a connection to a CompactLogix PLC using the Ethernet IP Connector. The data is published on the IE Databus. By using the application IE Flow Creator, we fetch the metadata of the Ethernet IP Connector, write some data on the configured tags and read out the new data.
+Here we configure a connection to a CompactLogix PLC using the Ethernet IP Connector. The data is published on the Databus. By using the application Flow Creator, we fetch the metadata of the Ethernet IP Connector, write some data on the configured tags and read out the new data.
 
 ![Overview](/docs/graphics/overview-eip.png)
 
@@ -43,25 +43,25 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
 ### Prerequisites
 
 - Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
-- IEM: Installed system configurator for Databus
+- IEM: Installed system Databus configurator for Databus
 - IED: Installed system app Databus
 - IED: Installed app Ethernet IP Connector
-- IED: Installed app IE Flow Creator
+- IED: Installed app Flow Creator
 - IED is connected to the Rockwell PLC CompactLogix via Ethernet
 - Studio 5000 project loaded on PLC
 - Google Chrome (Version ≥ 72)
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.5.1-4 / V1.8.6
-  - IE Databus Configurator V1.7.8
-- Industrial Edge Device (OS) V1.8.0-6
-  - IE Databus V1.7.1
-  - IIH Configurator V1.5.0
-  - Registry Service V1.5.0
-  - Ethernet IP Connector V2.0.0-5
-  - IE Flow Creator V1.10.0-3
-  - Data Service V1.5.0
+- Industrial Edge Management (IEM) V1.16.11
+  - Databus Configurator V3.0.0
+- Industrial Edge Device (OS) V2.1.0-22
+  - Databus V3.0.0
+  - Common Configurator V1.11.1-0
+  - Registry Service V1.11.0-2
+  - Ethernet IP Connector V3.0.2-1
+  - Flow Creator V1.17.1-1
+  - IIH Essentials V1.11.0
 - PLC: Allen-Bradley CompactLogix
 - Studio 5000 Logix Designer V32.00
 
