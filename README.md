@@ -36,7 +36,7 @@ The Ethernet IP Connector is an application that runs on the individual IED. Con
 
 Here we configure a connection to a CompactLogix PLC using the Ethernet IP Connector. The data is published on the Databus. By using the application Flow Creator, we fetch the metadata of the Ethernet IP Connector, write some data on the configured tags and read out the new data.
 
-![Overview](/docs/graphics/overview-eip.png)
+![Overview](/docs/graphics/EthernetIPArchi.PNG)
 
 ## Requirements
 
