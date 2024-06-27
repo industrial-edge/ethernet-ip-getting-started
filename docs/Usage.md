@@ -6,9 +6,9 @@
   - [Write data](#write-data)
   - [Use Data Service](#use-data-service)
   
-Via the IE Flow Creator, we can write and read the EtherNet/IP data.
+Via the Flow Creator, we can write and read the EtherNet/IP data.
 
-The used flow can be downloaded [here](/src/flow.json) and imported into the IE Flow Creator, that is running on the same IED as the Ethernet IP Connector.
+The used flow can be downloaded [here](/src/flow.json) and imported into the Flow Creator, that is running on the same IED as the Ethernet IP Connector.
 
 ## Read metadata
 
@@ -63,14 +63,14 @@ To write some data on the Ethernet IP tag, you must fetch the tag ID from metada
 
 ![write_int](/docs/graphics/Write_Int.png)
 
-## Use Data Service
+## Use IIH Essentials
 
-The app Data Service collects the data out of different connectors and stores it for a defined time period. This is a prerequisite for other apps like Performance Insight.
+The app IIH Essentials collects the data out of different connectors and stores it for a defined time period. This is a prerequisite for other apps like Performance Insight.
 
 To activate the data transfer from the Ethernet IP Connector, proceed as following:
 
 - open the IED web interface
-- open the app Data Service
+- open the app IIH Essentials
 - go to tab 'Connectors' and select 'Ethernet IP Connector'
 - select the edit button and enter the user name and the password for the Databus user
 - activate the adapter and save
@@ -81,4 +81,4 @@ To activate the data transfer from the Ethernet IP Connector, proceed as followi
 
 ![DataServiceAdapter](/docs/graphics/DataService_Add.png)
 
-- data is now collected by the Data Service and can be used by further apps
+- data is now collected by the IIH Essentials and can be used by further apps
