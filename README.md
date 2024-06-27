@@ -75,14 +75,14 @@ You can find further information about the following steps in the [Configuration
 
 - [Overview](/docs/Installation.md#overview)
 - [Install Ethernet IP Connector](/docs/Installation.md#install-ethernet-ip-connector)
-- [Configure IE Databus](/docs/Installation.md#configure-ie-databus)
-- [Configure Ethernet IP via IIH Configurator](/docs/Installation.md#configure-ethernet-ip-via-iih-configurator)
+- [Configure Databus](/docs/Installation.md#configure-databus)
+- [Configure Ethernet IP via Common Configurator](/docs/Installation.md#configure-ethernet-ip-via-common-configurator)
 
 ## Usage
 
 As soon as the Ethernet IP Connector is configured, data can be transfered.
 
-You can find further information about how to handle the data via the IE Flow Creator in the [Usage](/docs/Usage.md) documentation:
+You can find further information about how to handle the data via the Flow Creator in the [Usage](/docs/Usage.md) documentation:
 
 * [Read metadata](/docs/Usage.md#read-metadata)
 * [Write data](/docs/Usage.md#write-data)
