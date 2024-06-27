@@ -4,7 +4,7 @@
   - [Read metadata](#read-metadata)
   - [Read data](#read-data)
   - [Write data](#write-data)
-  - [Use Data Service](#use-data-service)
+  - [Use IIH Essentials](#use-IIH-Essentials)
   
 Via the Flow Creator, we can write and read the EtherNet/IP data.
 
