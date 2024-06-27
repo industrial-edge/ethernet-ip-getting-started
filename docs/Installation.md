@@ -62,9 +62,9 @@ With the Common Configurator, you can configure several connectors and publish t
 
 ![IIH_Settings](/docs/graphics/IIH_Settings.png)
 
-As soon as the Ethernet IP Connector is installed and started on the same IED as the IIH Configurator, the connector is visible within the configurator. In this example we want to configure an EtherNet/IP connection to a CompactLogix PLC (Allen-Bradley). To configure the Ethernet IP Connector, proceed as following:
+As soon as the Ethernet IP Connector is installed and started on the same IED as the Common Configurator, the connector is visible within the configurator. In this example we want to configure an EtherNet/IP connection to a CompactLogix PLC (Allen-Bradley). To configure the Ethernet IP Connector, proceed as following:
 
-- go to the tab 'Get data' and select tab 'Databus connectors'
+- go to the tab 'Get data' and select tab 'Connector Configuration'
 - select the Ethernet IP Connector
 
 ![ConnectorOverview](/docs/graphics/IIH_Connector_Overview.png)
@@ -84,7 +84,7 @@ As soon as the Ethernet IP Connector is installed and started on the same IED as
 
 ![Deploy](/docs/graphics/IIH_Deploy.png)
 
-- back on the overview page 'Databus connectors', the status of the Ethernet IP Connector should be shown as **connected**
+- back on the overview page 'Available connectors', the status of the Ethernet IP Connector should be shown as **connected**
 
 ![Connected](/docs/graphics/IIH_Connected.png)
 
