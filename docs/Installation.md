@@ -60,7 +60,7 @@ With the Common Configurator, you can configure several connectors and publish t
 - in the Common Configurator settings under the tab 'Data Subscriber settings' enter the databus user name and password ('edge'/'edge')
 - Save the settings
 
-![IIH_Settings](/docs/graphics/IIH_Settings.png)
+![IIH_Settings](/docs/graphics/Ccdatabus.PNG)
 
 As soon as the Ethernet IP Connector is installed and started on the same IED as the Common Configurator, the connector is visible within the configurator. In this example we want to configure an EtherNet/IP connection to a CompactLogix PLC (Allen-Bradley). To configure the Ethernet IP Connector, proceed as following:
 
