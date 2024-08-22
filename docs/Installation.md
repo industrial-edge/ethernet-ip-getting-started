@@ -67,7 +67,7 @@ As soon as the Ethernet IP Connector is installed and started on the same IED as
 - go to the tab 'Get data' and select tab 'Connector Configuration'
 - select the Ethernet IP Connector
 
-![ConnectorOverview](/docs/graphics/IIH_Connector_Overview.png)
+![Cchome](/docs/graphics/Cchome.PNG)
 
 - switch to tab 'Tags'
 - choose 'Add data source'
