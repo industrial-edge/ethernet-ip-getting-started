@@ -67,10 +67,13 @@ As soon as the Ethernet IP Connector is installed and started on the same IED as
 - go to the tab 'Get data' and select tab 'Connector Configuration'
 - select the Ethernet IP Connector
 
-![Cchome](/docs/graphics/Cchome.PNG)
+![Cchome](/docs/graphics/Cchome.PNG) 
 
 - switch to tab 'Tags'
 - choose 'Add data source'
+
+![Ccdatasources](/docs/graphics/Ccdatasources.PNG)
+
 - configure the PLC accordingly and save
 
 ![Source](/docs/graphics/ethernet_ip_source.png)
