@@ -76,7 +76,7 @@ As soon as the Ethernet IP Connector is installed and started on the same IED as
 
 - configure the PLC accordingly and save
 
-![Source](/docs/graphics/ethernet_ip_source.png)
+![Source](/docs/graphics/CCadddatasource.PNG)
 
 - under column 'Actions' of the newly created PLC, choose 'Add tag'
 - configure a tag as needed and save
