@@ -86,7 +86,7 @@ As soon as the Ethernet IP Connector is installed and started on the same IED as
   
 - configure a tag as needed and save
 
-![Tags](/docs/graphics/IIH_Tags.png)
+![Tags](/docs/graphics/Countertag.PNG)
 
 - select the newly created PLC and click 'Deploy'
 
