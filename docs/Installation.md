@@ -94,7 +94,7 @@ As soon as the Ethernet IP Connector is installed and started on the same IED as
   - Var_BOOL
   - Var_REAL
 
-![Deploy](/docs/graphics/IIH_Deploy.png)
+![newlyaddedtag](/docs/graphics/newlyaddedtag.PNG)
 
 - back on the overview page 'Available connectors', the status of the Ethernet IP Connector should be shown as **connected**
 
