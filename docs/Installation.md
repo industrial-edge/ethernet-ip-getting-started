@@ -88,7 +88,11 @@ As soon as the Ethernet IP Connector is installed and started on the same IED as
 
 ![Tags](/docs/graphics/Countertag.PNG)
 
-- select the newly created PLC and click 'Deploy'
+- Add the three tags that mentioned bellow and select the newly created Datasource 'Compactlogix' and click 'Deploy'
+
+  - Counter_INT
+  - Var_BOOL
+  - Var_REAL
 
 ![Deploy](/docs/graphics/IIH_Deploy.png)
 
