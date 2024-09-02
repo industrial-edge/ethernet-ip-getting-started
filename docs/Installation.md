@@ -98,6 +98,6 @@ As soon as the Ethernet IP Connector is installed and started on the same IED as
 
 - back on the overview page 'Available connectors', the status of the Ethernet IP Connector should be shown as **connected**
 
-![Connected](/docs/graphics/IIH_Connected.png)
+![IIHoverview](/docs/graphics/IIHoverview.PNG)
 
 Now data can be transferred via the Ethernet IP connection. Please find more information in the  [Usage](/docs/Usage.md) documentation.
