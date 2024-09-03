@@ -22,13 +22,13 @@ To print out the Ethernet IP Connector metadata, follow these steps:
 
 ![metadata_flow](/docs/graphics/Metadata_Flow.png)
 
-![metadata](/docs/graphics/Metadata.png)
+![Metadata](/docs/graphics/Metadata.png)
 
 Now you can see the configured datapoint according to the Ethernet IP settings:
 
-- ***Counter_INT*** with unique id **102**
-- ***Var_BOOL*** with unique id **103**
-- ***Var_REAL*** with unique id **104**
+- ***Counter_INT*** with unique id **1**
+- ***Var_BOOL*** with unique id **2**
+- ***Var_REAL*** with unique id **3**
 
 ## Read data
 
