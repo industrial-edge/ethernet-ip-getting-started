@@ -71,14 +71,23 @@ To activate the data transfer from the Ethernet IP Connector, proceed as followi
 
 - open the IED web interface
 - open the app IIH Essentials
+- select the settings button and enter the user name and the password for the Databus user 'edge' and 'edge'
+
+![DatabusEIP](/docs/graphics/DatabusEIP.PNG)
+
 - go to tab 'Connectors' and select 'Ethernet IP Connector'
-- select the edit button and enter the user name and the password for the Databus user
+
+![EIPIIH](/docs/graphics/EIPIIH.PNG)
+
 - activate the adapter and save
 
-![DataServiceAdapter](/docs/graphics/DataService_Adapter.png)
+![Activateadapter](/docs/graphics/Activateadapter.PNG)
 
 - go to tab 'Assets & Connectivity' and add the variables, that were configured within the Ethernet IP Connector
 
-![DataServiceAdapter](/docs/graphics/DataService_Add.png)
+![Assetsandstructure](/docs/graphics/Assetsandstructure.PNG)
+
+![IIHesentialsoverview](/docs/graphics/IIHesentialsoverview.PNG)
+
 
 - data is now collected by the IIH Essentials and can be used by further apps
