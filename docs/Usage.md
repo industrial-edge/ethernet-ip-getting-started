@@ -49,19 +49,19 @@ Since the read payload only contains the tag ID and not the tag name, you need t
 
 ## Write data
 
-To write some data on the Ethernet IP tag, you must fetch the tag ID from metadata payload based on the tag name. Here we want to write to the parameter ***Var_REAL*** (tag ID **104**). Please follow these steps:
+To write some data on the Ethernet IP tag, you must fetch the tag ID from metadata payload based on the tag name. Here we want to write to the parameter ***Var_REAL*** (tag ID **3**). Please follow these steps:
 
-- create an inject node with this JSON payload: `{ "vals": [ { "id": "104", "val": "111" } ] }`
+- create an inject node with this JSON payload: `{ "vals": [ { "id": "3", "val": "111" } ] }`
 - create a mqtt out node
 - set the server to 'ie-databus' with port 1883 and corresponding user name/password ('edge'/'edge')
-- set the topic to `ie/d/j/simatic/v1/eip1/dp/w/CompactLogix`
+- set the topic to `ie/d/j/simatic/v1/eip1/dp/w/Compactlogix`
 - connect the inject node to the mqtt out node
 - deploy the flow
 - click the inject button, to write the value
 
-![write_data_flow](/docs/graphics/Write_Data_Flow.png)
+![writedata](/docs/graphics/writedata.PNG)
 
-![write_int](/docs/graphics/Write_Int.png)
+![payload](/docs/graphics/Payloadmsg.png)
 
 ## Use IIH Essentials
 
