@@ -22,7 +22,7 @@ To print out the Ethernet IP Connector metadata, follow these steps:
 
 ![metadata_flow](/docs/graphics/Metadata_Flow.png)
 
-![Metadata](/docs/graphics/Metadata.png)
+![metadataflowcreator](/docs/graphics/metadataflowcreator.PNG)
 
 Now you can see the configured datapoint according to the Ethernet IP settings:
 
