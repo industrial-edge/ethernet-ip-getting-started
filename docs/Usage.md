@@ -43,9 +43,9 @@ To print out the transfered Ethernet IP Connector data, follow these steps:
 
 ![read_data_flow](/docs/graphics/Read_Data_Flow.png)
 
-Since the read payload only contains the tag ID and not the tag name, you need to assign the tag ID according to the metadata. Here the parameter ***Counter_INT*** (tag ID **102**) is incremented automatically by the PLC, so we can read each single value:
+Since the read payload only contains the tag ID and not the tag name, you need to assign the tag ID according to the metadata. Here the parameter ***Counter_INT*** (tag ID **1**) is incremented automatically by the PLC, so we can read each single value:
 
-![read_int](/docs/graphics/Read_Int.png)
+![Datapoints](/docs/graphics/Datapoints.PNG)
 
 ## Write data
 
