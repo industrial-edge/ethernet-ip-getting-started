@@ -88,13 +88,15 @@ As soon as the Ethernet IP Connector is installed and started on the same IED as
 
 ![Tags](/docs/graphics/Countertag.PNG)
 
-- Add the three tags that mentioned bellow and select the newly created Datasource 'Compactlogix' and click 'Deploy'
+- Add the three tags that mentioned bellow and select the newly created Datasource 'Compactlogix'
 
   - Counter_INT
   - Var_BOOL
   - Var_REAL
 
-![newlyaddedtag](/docs/graphics/newlyaddedtag.PNG)
+- For writing the tag values onto the MQTT databus you need to ctivate and confirm the 'Publish on the databus' option for each tag. And click Deploy
+
+![Deploydatabus](/docs/graphics/Deploydatabus.PNG)
 
 - back on the overview page 'Available connectors', the status of the Ethernet IP Connector should be shown as **connected**
 
