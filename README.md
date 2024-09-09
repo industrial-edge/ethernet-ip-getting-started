@@ -43,7 +43,7 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
 ### Prerequisites
 
 - Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
-- IEM: Installed system Databus configurator for Databus
+- IEM: Installed system configurator for Databus
 - IED: Installed system app Databus
 - IED: Installed app Ethernet IP Connector
 - IED: Installed app Flow Creator
