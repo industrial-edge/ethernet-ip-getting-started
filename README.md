@@ -34,9 +34,9 @@ The Ethernet IP Connector is an application that runs on the individual IED. Con
 
 ### General task
 
-Here we configure a connection to a CompactLogix PLC using the Ethernet IP Connector. The data is published on the IE Databus. By using the application IE Flow Creator, we fetch the metadata of the Ethernet IP Connector, write some data on the configured tags and read out the new data.
+Here we configure a connection to a CompactLogix PLC using the Ethernet IP Connector. The data is published on the Databus. By using the application Flow Creator, we fetch the metadata of the Ethernet IP Connector, write some data on the configured tags and read out the new data.
 
-![Overview](/docs/graphics/overview-eip.png)
+![Overview](/docs/graphics/EthernetIPArchi.PNG)
 
 ## Requirements
 
@@ -46,22 +46,27 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
 - IEM: Installed system configurator for Databus
 - IED: Installed system app Databus
 - IED: Installed app Ethernet IP Connector
-- IED: Installed app IE Flow Creator
+- IED: Installed app Common Configurator
+- IED: Installed app Registry Service
+- IED: Installed app Common Import Converter
+- IED: Installed app IIH Semantics
+- IED: Installed app Flow Creator
+- IED: Installed app IIH Essentials (optional)
 - IED is connected to the Rockwell PLC CompactLogix via Ethernet
 - Studio 5000 project loaded on PLC
 - Google Chrome (Version ≥ 72)
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.5.1-4 / V1.8.6
-  - IE Databus Configurator V1.7.8
-- Industrial Edge Device (OS) V1.8.0-6
-  - IE Databus V1.7.1
-  - IIH Configurator V1.5.0
-  - Registry Service V1.5.0
-  - Ethernet IP Connector V2.0.0-5
-  - IE Flow Creator V1.10.0-3
-  - Data Service V1.5.0
+- Industrial Edge Management (IEM) V1.16.11
+  - Databus Configurator V3.0.0
+- Industrial Edge Device (OS) V2.1.0-22
+  - Databus V3.0.0
+  - Common Configurator V1.11.1-0
+  - Registry Service V1.11.0-2
+  - Ethernet IP Connector V3.0.2-1
+  - Flow Creator V1.17.1-1
+  - IIH Essentials V1.11.0
 - PLC: Allen-Bradley CompactLogix
 - Studio 5000 Logix Designer V32.00
 
@@ -75,14 +80,14 @@ You can find further information about the following steps in the [Configuration
 
 - [Overview](/docs/Installation.md#overview)
 - [Install Ethernet IP Connector](/docs/Installation.md#install-ethernet-ip-connector)
-- [Configure IE Databus](/docs/Installation.md#configure-ie-databus)
-- [Configure Ethernet IP via IIH Configurator](/docs/Installation.md#configure-ethernet-ip-via-iih-configurator)
+- [Configure Databus](/docs/Installation.md#configure-databus)
+- [Configure Ethernet IP via Common Configurator](/docs/Installation.md#configure-ethernet-ip-via-common-configurator)
 
 ## Usage
 
 As soon as the Ethernet IP Connector is configured, data can be transfered.
 
-You can find further information about how to handle the data via the IE Flow Creator in the [Usage](/docs/Usage.md) documentation:
+You can find further information about how to handle the data via the Flow Creator in the [Usage](/docs/Usage.md) documentation:
 
 * [Read metadata](/docs/Usage.md#read-metadata)
 * [Write data](/docs/Usage.md#write-data)
