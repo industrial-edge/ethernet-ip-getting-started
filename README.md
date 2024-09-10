@@ -46,10 +46,12 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
 - IEM: Installed system configurator for Databus
 - IED: Installed system app Databus
 - IED: Installed app Ethernet IP Connector
-- IED: Installed app IIH Registry Service
-- IED: IIH Semantics
-- IED: IIH Common Import Converter
+- IED: Installed app Common Configurator
+- IED: Installed app Registry Service
+- IED: Installed app Common Import Converter
+- IED: Installed app IIH Semantics
 - IED: Installed app Flow Creator
+- IED: Installed app IIH Essentials (optional)
 - IED is connected to the Rockwell PLC CompactLogix via Ethernet
 - Studio 5000 project loaded on PLC
 - Google Chrome (Version ≥ 72)
