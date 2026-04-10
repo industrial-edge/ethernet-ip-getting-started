@@ -47,7 +47,6 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
 - IED: Installed system app Databus
 - IED: Installed app Ethernet IP Connector
 - IED: Installed app Common Configurator
-- IED: Installed app Registry Service
 - IED: Installed app Common Import Converter
 - IED: Installed app IIH Semantics
 - IED: Installed app Flow Creator
@@ -58,15 +57,14 @@ Here we configure a connection to a CompactLogix PLC using the Ethernet IP Conne
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.16.11
-  - Databus Configurator V3.0.0
-- Industrial Edge Device (OS) V2.1.0-22
-  - Databus V3.0.0
-  - Common Configurator V1.11.1-0
-  - Registry Service V1.11.0-2
-  - Ethernet IP Connector V3.0.2-1
-  - Flow Creator V1.17.1-1
-  - IIH Essentials V1.11.0
+- Industrial Edge Management (IEM) V2.8.0-9
+  - Databus Configurator V3.3.0
+- Industrial Edge Device (OS) V3.1.0-19
+  - Databus V3.3.2
+  - Common Configurator V4.0.0
+  - Ethernet IP Connector V4.1.1
+  - Flow Creator V1.19.5
+  - IIH Essentials V4.0.0
 - PLC: Allen-Bradley CompactLogix
 - Studio 5000 Logix Designer V32.00
 
